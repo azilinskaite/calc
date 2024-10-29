@@ -1,0 +1,167 @@
+@font-face {
+    font-family: "Plus Jakarta Sans medium";
+    src: url(./assets/fonts/PlusJakartaSans-Medium.ttf);
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Plus Jakarta Sans bold";
+    src: url(./assets/fonts/PlusJakartaSans-Bold.ttf);
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: black;
+    color: white;
+    font-family: "Plus Jakarta Sans medium", sans-serif;
+    display: flex;
+    justify-content: center;
+}
+
+main {
+    margin-top: 150px; /* change gap from top */
+    border: 1px solid white;
+    border-radius: 1rem;
+    max-width: 46rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    
+    #calculator {
+        padding: 2rem;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        /* fix */
+        h4, a, label {
+            font-size: 0.8rem;
+            color: lightgray;
+        }
+        .header {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            h1 {
+                font-size: 1.1rem;
+            }
+            a {
+                text-decoration: underline;
+            }
+        }
+        .form-1 {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+            .input-box {
+                border: 1px solid gray;
+                background-color: navy;
+                border-radius: 0.5em;
+                display: flex;
+                align-items: center;
+                span {
+                    margin: 0 0.5em;
+                    color: lightgrey;
+                }
+            input {
+                flex: auto;
+                padding: 0.4em;
+                font-size: 0.8em;
+                font-family: "Plus Jakarta Sans bold", sans-serif;
+                border-style: none;
+                border-radius: 0 0.5em 0.5em 0;
+            }
+        }
+        }
+        .form-2 {
+            /* display: flex; */
+            /* how to align in same row, to keep initial width */
+            .term-form, .rate-form {
+                .input-container {
+                    border: 1px solid gray;
+                    background-color: navy;
+                    border-radius: 0.5em;
+                    display: flex;
+                    align-items: center;
+                    margin-top: 0.5rem;
+                    input {
+                        flex: auto;
+                        padding: 0.4em;
+                        font-size: 0.8em;
+                        font-family: "Plus Jakarta Sans bold", sans-serif;
+                        border-style: none;
+                        border-radius: 0.5em 0 0 0.5em;
+                    }
+                    span {
+                        margin: 0 0.5em;
+                        color: lightgrey;
+                        font-size: 0.8rem;
+                    }
+                }       
+            }
+         }
+        .form-radio {
+        h3 {
+        font-size: 0.8rem;
+        color: lightgray;
+        margin-bottom: 0.5rem;
+        }
+        .radio-box {
+            border: 1px solid gray;
+            background-color: white;
+            border-radius: 0.5em;
+            display: flex;
+            padding: 0.4em;
+            font-size: 0.8em;
+            margin-bottom: 0.5rem;
+            /* center items inside */
+            label {
+                color: black;
+                font-family: "Plus Jakarta Sans bold", sans-serif;
+                input {
+                    margin-right: 0.5rem;
+                }
+            }
+        }
+    }
+    button {
+        width: 80%;
+        border-radius: 1.2rem;
+        border-style: none;
+        background-color: navy;
+        color: lightgray;
+        font-family: "Plus Jakarta Sans bold", sans-serif;
+        font-size: 0.8em;
+        padding: 0.8em;
+    }
+}
+#results-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+    padding: 1rem;
+    background-color: navy;
+    /* fix in nicer way? */
+    border-top-right-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    border-bottom-left-radius: 3rem;
+    h2 {
+        text-align: center;
+        font-size: 1.2rem;
+    }
+    p {
+        text-align: center;
+        font-size: 0.8rem;
+        color: lightgray;
+    }
+}
+}
+
